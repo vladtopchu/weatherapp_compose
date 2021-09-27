@@ -23,7 +23,7 @@ class MainActivity : ComponentActivity() {
                     NavHost(navController, startDestination = Screen.MapScreen.route) {
                         composable(Screen.MapScreen.route) { MapScreen(navController) }
                         composable(
-                            route = Screen.WeatherScreen.route,
+                            route = Screen.WeatherScreen.route + "/{coords}",
                         ) { WeatherScreen() }
                     }
                 }

@@ -38,8 +38,8 @@ fun MapScreen(
             Button(
                 modifier = Modifier.fillMaxWidth().height(40.dp),
                 onClick = {
-                    val test = "${state.latLng?.latitude}+${state.latLng?.longitude}"
-                    navController.navigate(Screen.WeatherScreen.route)
+                    val coords = "${state.latLng?.latitude}+${state.latLng?.longitude}"
+                    navController.navigate(Screen.WeatherScreen.route + "/${coords}")
                 }) {
                 Text("Click")
             }
